@@ -1,4 +1,4 @@
-package ca.ravichaudhary.apishoppingcart.common.exceptions;
+package ca.ravichaudhary.apishoppingcart.common;
 
 import org.springframework.http.HttpStatus;
 

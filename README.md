@@ -14,6 +14,10 @@ docker exec -it mongodb bash
 mongo -u mongoadmin -p secret --authenticationDatabase admin shoppingcart
 ```
 
+### Swagger API Documentation
+- Run the application
+- Visit http://localhost:8080/swagger-ui.html
+
 ### Requirement
 
 Develop an online shopping cart application for a company which sells products (feel free to sell

@@ -1,46 +1,90 @@
 package ca.ravichaudhary.apishoppingcart.cart;
 
+import ca.ravichaudhary.apishoppingcart.product.Product;
+import ca.ravichaudhary.apishoppingcart.user.User;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 
 import java.util.List;
 
+// This class uses Builder pattern
 public class Cart {
 
     @Id
     private String id;
-    private String userId;
-    private List<CartItem> items;
+
+    @DBRef
+    private User user;
+
+    @DBRef
+    private Product product;
+
+    private Integer quantity;
+    private Double amount;
+
+    public Cart() {
+    }
+
+    public Cart(User user, Product product, Integer quantity, Double amount) {
+        this.user = user;
+        this.product = product;
+        this.quantity = quantity;
+        this.amount = amount;
+    }
 
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public Cart setId(String id) {
         this.id = id;
+        return this;
     }
 
-    public String getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public Cart setUser(User user) {
+        this.user = user;
+        return this;
     }
 
-    public List<CartItem> getItems() {
-        return items;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setItems(List<CartItem> items) {
-        this.items = items;
+    public Cart setProduct(Product product) {
+        this.product = product;
+        return this;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public Cart setQuantity(Integer quantity) {
+        this.quantity = quantity;
+        return this;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public Cart setAmount(Double amount) {
+        this.amount = amount;
+        return this;
     }
 
     @Override
     public String toString() {
         return "Cart{" +
                 "id='" + id + '\'' +
-                ", userId='" + userId + '\'' +
-                ", items=" + items +
+                ", user=" + user +
+                ", product=" + product +
+                ", quantity=" + quantity +
+                ", amount=" + amount +
                 '}';
     }
 }

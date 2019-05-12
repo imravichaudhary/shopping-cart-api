@@ -29,7 +29,7 @@ public class ProductController {
     }
 
     @GetMapping(value = "{id}")
-    public Product getProduct(@PathVariable(value = "id", required = true) String id) {
+    public Product getProduct(@PathVariable("id") String id) {
         return productService.find(id).orElseThrow(() -> new NotFoundException(String.format("Not found: %s", id)));
     }
 }

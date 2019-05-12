@@ -12,6 +12,7 @@ public class ApiShoppingCartApplication {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext applicationContext = SpringApplication.run(ApiShoppingCartApplication.class, args);
 
+		// Insert sample dataset
 		ProductService productService = applicationContext.getBean(ProductService.class);
 		productService.deleteAll();
 		productService.insertProductSampleData();

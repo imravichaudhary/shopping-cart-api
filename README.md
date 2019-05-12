@@ -18,6 +18,12 @@ mongo -u mongoadmin -p secret --authenticationDatabase admin shoppingcart
 - Run the application
 - Visit http://localhost:8080/swagger-ui.html
 
+### API Testing using Postman
+- Run the application
+- Find the test collection in [Postman](./Postman/) directory
+- Import the json file in Postman
+- Execute the Collection Runner
+
 ### Requirement
 
 Develop an online shopping cart application for a company which sells products (feel free to sell

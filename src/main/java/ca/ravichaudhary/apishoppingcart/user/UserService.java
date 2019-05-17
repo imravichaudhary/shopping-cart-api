@@ -30,6 +30,6 @@ public class UserService {
     }
 
     public void insertUserSampleData() {
-        userRepository.saveAll(Collections.singleton(new User("Ravi Chaudhary", "ravi7131@yahoo.com")));
+        userRepository.saveAll(Collections.singleton(new User("user1", "Ravi Chaudhary", "ravi7131@yahoo.com")));
     }
 }

@@ -24,6 +24,11 @@ mongo -u mongoadmin -p secret --authenticationDatabase admin shoppingcart
 - Import the json file in Postman
 - Execute the Collection Runner
 
+### Create the package
+```
+./mvnw clean package
+```
+
 ### Requirement
 
 Develop an online shopping cart application for a company which sells products (feel free to sell
